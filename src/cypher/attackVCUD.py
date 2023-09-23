@@ -1,7 +1,7 @@
 import itertools
 
-from src.cypher.VigenereCipherUnicodeData import VigenereCipher
-from src.util.frequencia_util import ENGLISH_FREQ, PORTUGUES_FREQ
+from VigenereCipherUnicodeData import VigenereCipher
+from frequencia_util import ENGLISH_FREQ, PORTUGUES_FREQ
 
 ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
