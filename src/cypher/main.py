@@ -1,5 +1,5 @@
 from VigenereCipherUnicodeData import VigenereCipher
-from attackVCUD import FrequencyAnalysisAttack, FrequencyAnalysisAttackPT, FrequencyAnalysisAttackENG
+from attackVCUD import FrequencyAnalysisAttackPT, FrequencyAnalysisAttackENG
 from frequencia_util import ENGLISH_FREQ, PORTUGUES_FREQ
 
 
