@@ -9,7 +9,7 @@ ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 class FrequencyAnalysisAttack:
     def __init__(self, text, language_freq):
         self.FREQ = language_freq
-        self.keys = self._solve_vigenere(text)
+        self.keys = self.solve_vigenere(text)
 
     def __str__(self):
         return str(self.keys)
@@ -43,7 +43,7 @@ class FrequencyAnalysisAttack:
             freq[ord(l) - ord('a')] += 1
         return sum(abs(f / total - E) for f, E in zip(freq, self.FREQ))
 
-    def _solve_vigenere(self, text, min_key_size=None, max_key_size=None, a_is_zero=True):
+    def solve_vigenere(self, text, min_key_size=None, max_key_size=None, a_is_zero=True):
         best_keys = []
         min_key_size = min_key_size or 1
         max_key_size = max_key_size or 20
@@ -59,7 +59,7 @@ class FrequencyAnalysisAttack:
                     shifts.append((self.compare_frequency(VigenereCipher(key_char).decrypt(letters)), key_char))
                 key[key_index] = min(shifts, key=lambda x: x[0])[1]
             key_str = "".join(key)
-            if key_str not in best_keys:  # Check if the key is not already in the list
+            if key_str not in best_keys:
                 best_keys.append(key_str)
 
         best_keys.sort(key=lambda key: self.compare_frequency(self.vigenere_decrypt(text, key, True)))
