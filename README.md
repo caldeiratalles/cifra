@@ -3,7 +3,6 @@
 ## Alunos
 
 - Talles Marcelo - 200060295
-- Fé - sem Matrícula
 
 ## Descrição do Projeto
 
